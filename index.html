@@ -3,110 +3,214 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lluki's Homepage</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Llukii's Homepage</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #f7f7f9;
+      background: #181a1b;
+      color: #f3f4f6;
       font-family: 'Inter', Arial, sans-serif;
       margin: 0;
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .navbar {
+      width: 100%;
+      background: #232526;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      color: #f3f4f6;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #61dafb;
+    }
+    .main-hero {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      max-width: 1100px;
+      margin: 4rem auto 0 auto;
+      min-height: 500px;
+      gap: 2.5rem;
+    }
+    .profile-area {
+      flex: 1.1;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      background: rgba(30, 32, 34, 0.97);
+      border-radius: 24px;
+      box-shadow: 0 6px 40px rgba(0,0,0,0.18);
+      padding: 2.5rem 1.5rem;
+      min-width: 220px;
+      max-width: 320px;
+      margin-right: 0;
+      margin-left: 0.5rem;
     }
-    .container {
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(30, 34, 90, 0.07);
-      padding: 2.5rem 2.5rem 2rem 2.5rem;
-      max-width: 370px;
-      width: 90vw;
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: #232526;
+      object-fit: cover;
+      margin-bottom: 1.2rem;
+      border: 3px solid #35373a;
+      display: block;
+    }
+    .profile-name {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .center-blurb {
+      flex: 2;
+      background: rgba(30, 32, 34, 0.97);
+      border-radius: 24px;
+      box-shadow: 0 6px 40px rgba(0,0,0,0.25);
+      padding: 4rem 3rem;
+      max-width: 600px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: 0;
     }
-    .profile-img {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      object-fit: cover;
+    .center-blurb h1 {
+      font-size: 3.5rem;
       margin-bottom: 1.2rem;
-      background: #eaeaea;
-      display: inline-block;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-align: center;
     }
-    h1 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: #23243a;
-      margin: 0 0 0.5rem 0;
-      letter-spacing: -0.5px;
-    }
-    p.bio {
-      color: #5a5a6e;
-      font-size: 1.05rem;
-      margin-bottom: 1.5rem;
+    .center-blurb p {
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+      color: #b0b3b8;
+      text-align: center;
       line-height: 1.6;
     }
-    .socials {
+    .links {
       display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
       justify-content: center;
-      gap: 1.1rem;
-      margin-top: 1.2rem;
     }
-    .socials a {
-      background: #f2f2f5;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s, box-shadow 0.2s;
-      box-shadow: 0 1px 4px rgba(30, 34, 90, 0.04);
+    .links a {
+      color: #61dafb;
       text-decoration: none;
+      font-weight: 600;
+      font-size: 1.3rem;
+      transition: color 0.2s;
     }
-    .socials a:hover {
-      background: #e0e0e6;
-      box-shadow: 0 2px 8px rgba(30, 34, 90, 0.08);
+    .links a:hover {
+      color: #f3f4f6;
+      text-decoration: underline;
     }
-    .socials svg {
-      width: 22px;
-      height: 22px;
-      fill: #23243a;
+    .section {
+      width: 100%;
+      max-width: 900px;
+      margin: 3rem auto 0 auto;
+      background: rgba(30, 32, 34, 0.97);
+      border-radius: 20px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+      padding: 3rem 2.5rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
-    @media (max-width: 500px) {
-      .container {
-        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .section p {
+      font-size: 1.2rem;
+      color: #b0b3b8;
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    @media (max-width: 900px) {
+      .main-hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 2rem;
+        min-height: unset;
+      }
+      .profile-area, .center-blurb {
         max-width: 98vw;
+        width: 100%;
+        margin: 0 auto;
       }
-      h1 {
-        font-size: 1.2rem;
+      .center-blurb {
+        padding: 2rem 0.5rem;
       }
-      .profile-img {
-        width: 64px;
-        height: 64px;
+      .profile-area {
+        padding: 1.5rem 0.5rem;
+      }
+      .section {
+        padding: 2rem 0.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img class="profile-img" src="https://placehold.co/200x200" alt="Profile picture placeholder">
-    <h1>lLukii's github page</h1>
-    <p class="bio">
-      Hi, I'm Lucas (aka lLukii on social media). I like all things tech, music, and art.<br>
-      This is my github page, where I occasionaly post blogs detailing certain topics on my mind. 
-    </p>
-    <div class="socials">
-      <a href="https://github.com/llukii" target="_blank" title="GitHub">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
-      </a>
-      <a href="mailto:lucas.jiao.ny@gmail.com" title="Email">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l7.99 7.99c.39.39 1.02.39 1.41 0L20 10.01V20H4z"/></svg>
-      </a>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <div class="main-hero" id="about">
+    <div class="profile-area">
+      <img src="pfp2025.jpg" alt="Profile picture" class="profile-pic" />
+      <div class="profile-name">Lucas Jiao</div>
+      <div class="links">
+        <a href="https://github.com/llukii" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/llukii" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="center-blurb">
+      <h1>About me</h1>
+      <p>Hi, I'm Lucas (aka lLukii on social media). I like all things tech, music, and art.<br>
+        I'm passionate about technology, coding, and sharing knowledge.<br>Connect with me below:</p>
     </div>
   </div>
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <p>This is the Projects section. Project highlights will be added here soon!</p>
+  </section>
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>This is the Contact section. Feel free to reach out via LinkedIn or GitHub!</p>
+  </section>
 </body>
 </html> 
