@@ -4,194 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Llukii's Homepage</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: #181a1b;
-      color: #f3f4f6;
-      font-family: 'Inter', Arial, sans-serif;
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .navbar {
-      width: 100%;
-      background: #232526;
-      padding: 1rem 0;
-      display: flex;
-      justify-content: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-    .nav-links a {
-      color: #f3f4f6;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.25rem;
-      letter-spacing: 0.5px;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover {
-      color: #61dafb;
-    }
-    .main-hero {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: stretch;
-      width: 100%;
-      max-width: 1100px;
-      margin: 4rem auto 0 auto;
-      min-height: 500px;
-      gap: 2.5rem;
-    }
-    .profile-area {
-      flex: 1.1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: rgba(30, 32, 34, 0.97);
-      border-radius: 24px;
-      box-shadow: 0 6px 40px rgba(0,0,0,0.18);
-      padding: 2.5rem 1.5rem;
-      min-width: 240px;
-      max-width: 320px;
-      margin-right: 0;
-      margin-left: 0.5rem;
-    }
-    .profile-pic {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: #232526;
-      object-fit: cover;
-      margin-bottom: 1.2rem;
-      border: 3px solid #35373a;
-      display: block;
-    }
-    .profile-name {
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-    .center-blurb {
-      flex: 2;
-      background: rgba(30, 32, 34, 0.97);
-      border-radius: 24px;
-      box-shadow: 0 6px 40px rgba(0,0,0,0.25);
-      padding: 4rem 3rem;
-      max-width: 600px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-left: auto;
-      margin-right: 0;
-    }
-    .center-blurb h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1.2rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-align: center;
-    }
-    .center-blurb p {
-      font-size: 1rem;
-      margin-bottom: 2.5rem;
-      color: #b0b3b8;
-      text-align: center;
-      line-height: 1.6;
-    }
-    .links {
-      display: flex;
-      gap: 2rem;
-      margin-top: 1rem;
-      justify-content: center;
-    }
-    .links a {
-      color: #61dafb;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.3rem;
-      transition: color 0.2s;
-    }
-    .links a:hover {
-      color: #f3f4f6;
-      text-decoration: underline;
-    }
-    .section {
-      width: 100%;
-      max-width: 900px;
-      margin: 3rem auto 0 auto;
-      background: rgba(30, 32, 34, 0.97);
-      border-radius: 20px;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.18);
-      padding: 3rem 2.5rem;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1.2rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    .section p {
-      font-size: 1.2rem;
-      color: #b0b3b8;
-      margin-bottom: 0.5rem;
-      line-height: 1.7;
-    }
-    @media (max-width: 900px) {
-      .main-hero {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        margin-top: 2rem;
-        min-height: unset;
-      }
-      .profile-area, .center-blurb {
-        max-width: 98vw;
-        width: 100%;
-        margin: 0 auto;
-      }
-      .center-blurb {
-        padding: 2rem 0.5rem;
-      }
-      .profile-area {
-        padding: 1.5rem 0.5rem;
-      }
-      .section {
-        padding: 2rem 0.5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet", href="home.css">
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#blogs">Blogs</a>
-      <a href="#contact">Contact</a>
+      <a href="#more">More</a>
     </div>
   </nav>
   <div class="main-hero" id="about">
     <div class="profile-area">
-      <img src="home_icon.png" alt="Profile picture" class="profile-pic" />
+      <img src="assets/home_icon.png" alt="Profile picture" class="profile-pic" />
       <div class="profile-name">Lucas Jiao</div>
       Co2027 @ The Browning School <br>
       He / Him / His
@@ -222,7 +47,8 @@
   </section>
   <section class="section" id="more">
     <h2>More</h2>
-    <p>Coming soon!</p>
+    <p>Some miscellaneous stuff.</p>
+    <a href="Blog posts/coming_soon.html" style="color:#61dafb; font-weight:600; text-decoration:none;">Dimensional Analysis</a>
   </section>
 </body>
 </html> 

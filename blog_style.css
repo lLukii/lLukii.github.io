@@ -1,7 +1,31 @@
+@font-face {
+  font-family: 'mononoki';
+  src: url('mononoki 2/mononoki-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'mononoki';
+  src: url('mononoki 2/mononoki-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'mononoki';
+  src: url('mononoki 2/mononoki-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'mononoki';
+  src: url('mononoki 2/mononoki-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
 body {
   background: #181a1b;
   color: #f3f4f6;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'mononoki', monospace;
   margin: 0;
   min-height: 100vh;
   display: flex;
@@ -46,6 +70,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 .blog-title {
   font-size: 2.5rem;
@@ -62,6 +89,10 @@ body {
   font-size: 1.2rem;
   color: #f3f4f6;
   line-height: 1.7;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
 }
 .blog-contributors {
   font-size: 1.05rem;
@@ -72,6 +103,7 @@ body {
 @media (max-width: 900px) {
   .blog-container {
     padding: 2rem 0.5rem;
+    max-width: 98vw;
   }
   .nav-links {
     gap: 1rem;
