@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APCSA Mock</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../blog_style.css">
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#blogs">Blogs</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </nav>
+  <div class="blog-container">
+    <div class="blog-title">Two easy integrals from the MIT integration bee</div>
+    <div class="blog-date">August 6th, 2025</div>
+    <div class="blog-contributors">Contributors: Lucas Jiao</div>
+    <div class="blog-content">
+      <h3>Question 1:</h3>
+      Evaluate $$\int_1^\infty x^5 e^{-x}dx$$
+      We integrate by parts, repeatedly differentiating \(x^5\) and integrating \(e^{-x}\). Doing so gives us
+      $$\int_1^\infty x^5 e^{-x}dx=\lim_{c \to \infty}(\frac{x^5+5x^4+20x^3+60x^2+120x+120}{-e^{x}})|_1^c$$
+      Since \(e^x\) grows exponentially rather than polynomially, the numerator is negligible as \(x\) approaches infinity. Our upper limit is therefore \(0\). When we subtract by the lower limit of this integral, we get our answer, or 
+      $$-\frac{1+5+20+60+120+120}{-e}=\boxed{\frac{326}{e}}$$
+      <h3>Question 2:</h3>
+      Evaluate $$\int_0^2 \lfloor e^x \rfloor dx$$
+      We are clearly dealing with a stepwise function, meaning that it will have a fixed value for some range of \(x\) values. The integral is therefore the sum of the area of many rectangular "chunks" that we need to find. <br>  
+      We know that \(\lfloor e^x \rfloor=k\) when \(k \le e^x < k+1\), meaning that \(\ln(k) \le x < \ln(k+1)\). Assuming this range is between our lower and upper limit, we add \(k(\ln(k+1)-\ln(k))\) to our answer. However, we also know that our definite integral is bounded at \(x=2\), so \(e^x\) cannot exceed \(e^2 \approx 7.39\). Therefore, \(\lfloor e^x \rfloor=7\) is only true when \(\ln(7) \le x \le 2\). With these ideas in mind, we do some adding. 
+      $$\int_0^2 \lfloor e^x \rfloor dx=\ln(2)-\ln(1)+2(\ln(3)-\ln(2))+...+7(2-\ln(7))$$
+      $$=\ln(2)-\ln(1)+\ln(3^2)-\ln(2^2)+...+14-\ln(7^7)$$
+      $$=14+\ln(2 \cdot \frac{3^2}{2^2} \cdot ... \cdot \frac{7^6}{6^6} \cdot \frac{1}{7^7})
+      =14+\ln(\frac{1}{2} \cdot ... \cdot \frac{1}{7})=14+\ln(\frac{1}{5040})$$
+      $$=\boxed{14-\ln{5040}}$$
+    </div>
+  </div>
+</body>
+</html>
