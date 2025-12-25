@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello 2026</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../blog_style.css">
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#blogs">Blogs</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </nav>
+  <div class="blog-container">
+    <div class="blog-title">A cute problem to kickstart 2026</div>
+    <div class="blog-date">December 25th, 2025</div>
+    <div class="blog-contributors">Contributors: Lucas Jiao</div>
+    <div class="blog-content">
+        Let \(\mathcal{S}\) denote the set of all subsets of \(\{1,2,\dots,2026\}\). Find the arithmetic mean of the largest element across all sets in \(s \in \mathcal{S}\). <br><br>
+
+        Solution: Let's first find the sum of the largest elements \(S\). If we fix the largest element of the subset to be \(k\), then there are \(2^{k-1}\) ways we can choose the remaining elements. Thus, our desired sum turns out to be $$S=\sum_{k=1}^{2026}k\cdot 2^{k-1}$$ and we want to find \(\frac{S}{2^{2026}}\). Now, suppose that $$A(x)=\sum_{k=1}^{2026}x^k=\frac{x^{2027}-x}{x-1}$$ by the geometric series formula. Taking the power rule of the sum, it turns out that \(A'(2)=S\). Differentiating the summation gives us $$A'(x)=\frac{2026x^{2027}-2027x^{2026}+1}{(x-1)^2}$$ so our answer is $$\frac{A'(2)}{2^{2026}}=\frac{2026\cdot 2^{2027}-2027\cdot 2^{2026}+1}{2^{2026}}=2026\cdot 2-2027+\frac{1}{2^{2026}}$$ $$=\boxed{2025+\frac{1}{2^{2026}}}$$ Kinda interesting how that \(2^{-2026}\) term is just floating there. 
+    </div>
+  </div>
+</body>
+</html>
